@@ -9,4 +9,11 @@
 # caught_speeding(65, True) → 0
 
 def caught_speeding(speed, is_birthday):
-    pass
+    if speed <= 60 and is_birthday is False or speed <= 65 and is_birthday is True:
+        return 0
+
+    elif 61 <= speed <= 80 and is_birthday is False or 65 <= speed <= 85 and is_birthday is True:
+        return 1
+
+    else:
+        return 2
