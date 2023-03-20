@@ -14,3 +14,11 @@ def make_bricks(small, big, goal):
         rem = goal % 5
 
     return small >= rem
+
+
+def make_bricks_2(small, big, goal):
+    large_bricks = goal // 5
+    if large_bricks > big:
+        large_bricks = big
+    goal = goal - (large_bricks * 5)
+    return goal <= small
